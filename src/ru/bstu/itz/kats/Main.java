@@ -8,46 +8,48 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Лабораторные работы. Консоль.");
 
-        while (true) {
-            System.out.println("Выберите действие:");
-            System.out.println("1. Проверить числа");
-            System.out.println("2. Выход");
+        int choice = 0;
 
-            int choice = scanner.nextInt();
+        do {
+            System.out.println("Меню:");
+            System.out.println("1. ЛБ1: MenuCheckNumbers");
+            System.out.println("2. ЛБ2: MenuValidatePassword");
+            System.out.println("3. ЛБ3: MenuSomeFunction");
+            System.out.println("4. ЛБ4: MenuAnotherFunction");
+            System.out.println("5. ЛБ5: MenuYetAnotherFunction");
+            System.out.println("0. Выход");
+
+            System.out.print("Выберите пункт меню: ");
+            choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
-                    System.out.print("Введите первое число: ");
-                    int a = scanner.nextInt();
-
-                    System.out.print("Введите второе число: ");
-                    int b = scanner.nextInt();
-
-                    System.out.print("Введите третье число: ");
-                    int c = scanner.nextInt();
-
-                    checkNumbers(a, b, c);
-
+                    ThreeNumbers.MenuCheckNumbers();
                     break;
-
                 case 2:
-                    System.out.println("Выход.");
-                    return;
-
+                   // PasswordValidator.MenuValidatePassword();
+                    break;
+                case 3:
+                    // вызов соответствующего метода для ЛБ3
+                    break;
+                case 4:
+                    // вызов соответствующего метода для ЛБ4
+                    break;
+                case 5:
+                    // вызов соответствующего метода для ЛБ5
+                    break;
+                case 0:
+                    System.out.println("Выход из программы");
+                    break;
                 default:
-                    System.out.println("Неверный выбор.");
+                    System.out.println("Неправильный выбор, попробуйте еще раз");
+                    break;
             }
-        }
+
+            System.out.println();
+        } while (choice != 0);
     }
 
-    private static void checkNumbers(int a, int b, int c) {
-        ThreeNumbers tn = new ThreeNumbers(a, b, c);
-
-        if (tn.hasPositiveSum()) {
-            System.out.println("Сумма каких-либо двух чисел является положительной.");
-        } else {
-            System.out.println("Сумма каких-либо двух чисел не является положительной.");
-        }
-    }
 }
