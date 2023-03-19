@@ -14,11 +14,11 @@ public class Main {
 
         do {
             System.out.println("Меню:");
-            System.out.println("1. ЛБ1: MenuCheckNumbers");
-            System.out.println("2. ЛБ2: MenuValidatePassword");
-            System.out.println("3. ЛБ3: MenuSomeFunction");
-            System.out.println("4. ЛБ4: MenuAnotherFunction");
-            System.out.println("5. ЛБ5: MenuYetAnotherFunction");
+            System.out.println("1. ЛБ1: Тестирование лабораторной работы 1");
+            System.out.println("2. ЛБ2: Тестирование лабораторной работы 2");
+            System.out.println("3. ЛБ3: Тестирование лабораторной работы 3");
+            System.out.println("4. ЛБ4: Тестирование лабораторной работы 4");
+            System.out.println("5. ЛБ5: Тестирование лабораторной работы 5");
             System.out.println("0. Выход");
 
             System.out.print("Выберите пункт меню: ");
@@ -27,9 +27,11 @@ public class Main {
             switch (choice) {
                 case 1:
                     ThreeNumbers.MenuCheckNumbers();
+                    PasswordValidator.MenuValidatePassword();
+                    LengthConverter.MenuLengthConverter();
                     break;
                 case 2:
-                   // PasswordValidator.MenuValidatePassword();
+
                     break;
                 case 3:
                     // вызов соответствующего метода для ЛБ3
