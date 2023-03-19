@@ -26,9 +26,10 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    ThreeNumbers.MenuCheckNumbers();
                     PasswordValidator.MenuValidatePassword();
+                    ThreeNumbers.MenuCheckNumbers();
                     LengthConverter.MenuLengthConverter();
+                    SequenceAnalyzer.MenuSequenceAnalyzer();
                     break;
                 case 2:
 
