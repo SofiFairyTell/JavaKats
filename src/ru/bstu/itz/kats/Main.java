@@ -2,6 +2,7 @@ package ru.bstu.itz.kats;
 
 import LabFunctions.lab1.*;
 import LabFunctions.lab3.*;
+import LabFunctions.lab4.*;
 
 import java.util.Scanner;
 
@@ -38,7 +39,7 @@ public class Main {
                     readTransport();
                     break;
                 case 4:
-                    // вызов соответствующего метода для ЛБ4
+                    getPersonalInfo();
                     break;
                 case 5:
                     // вызов соответствующего метода для ЛБ5
@@ -135,4 +136,33 @@ public class Main {
         }
     }
 
+    public static void getPersonalInfo()
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите фамилию: ");
+        String surname = scanner.nextLine();
+
+        System.out.print("Введите имя: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Введите номер телефона: ");
+        String phone = scanner.nextLine();
+
+        System.out.print("Введите дату: ");
+        String date = scanner.nextLine();
+
+        boolean isSurnameValid = NameValidator.isValidSurname(surname);
+        boolean isNameValid = NameValidator.isValidName(name);
+        boolean isPhoneValid = PhoneChecker.checkPhone(phone);
+        boolean isDateValid = DataChecker.isDateValid(date);
+
+        if (isSurnameValid && isNameValid && isPhoneValid && isDateValid) {
+            System.out.println("Данные введены корректно!");
+        } else {
+            System.out.println("Ошибка ввода данных!");
+        }
+
+        //scanner.close();
+    }
 }
